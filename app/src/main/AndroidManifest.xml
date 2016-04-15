@@ -17,6 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddPatient"
+            android:label="@string/title_activity_add_patient"
+            android:parentActivityName="coe.pitt.edu.vitalvest.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="coe.pitt.edu.vitalvest.MainActivity"/>
+        </activity>
     </application>
 
 </manifest>

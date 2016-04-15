@@ -45,7 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Add Patient"
-                android:id="@+id/button3"
+                android:id="@+id/addPatient"
+                android:onClick="addPatient"
                 android:background="@drawable/main_button"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="3dp" />
@@ -53,8 +54,9 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Patient History"
-                android:id="@+id/button4"
+                android:text="View Patient History"
+                android:id="@+id/patientHistory"
+                android:onClick="viewPatientHistory"
                 android:background="@drawable/main_button"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp" />
@@ -63,7 +65,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="New Session"
-                android:id="@+id/button5"
+                android:id="@+id/newSession"
+                android:onClick="newSession"
                 android:background="@drawable/main_button"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp" />
@@ -71,8 +74,9 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="View Vitals"
-                android:id="@+id/button6"
+                android:text="View Patient Vitals"
+                android:id="@+id/patientVitals"
+                android:onClick="viewVitals"
                 android:background="@drawable/main_button"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp" />
