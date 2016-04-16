@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="coe.pitt.edu.vitalvest">
 
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,11 +23,12 @@
         <activity
             android:name=".AddPatient"
             android:label="@string/title_activity_add_patient"
-            android:parentActivityName="coe.pitt.edu.vitalvest.MainActivity">
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="coe.pitt.edu.vitalvest.MainActivity"/>
+                android:value="coe.pitt.edu.vitalvest.MainActivity" />
         </activity>
+        <activity android:name=".BluetoothControl"></activity>
     </application>
 
 </manifest>

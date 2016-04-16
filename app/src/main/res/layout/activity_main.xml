@@ -10,36 +10,36 @@
     tools:context="coe.pitt.edu.lab5.MainActivity"
     android:background="#3f3333">
 
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/connecttodevice"
-        android:id="@+id/switch2"
-        android:textColor="#ffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+    <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <item
+            android:id="@+id/bluetooth"
+            android:orderInCategory="100"
+            android:showAsAction="always"
+            android:icon="@drawable/ic_menu_preferences"
+            android:title="Bluetooth"/>
+
+
+    </menu>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/switch2"
         android:layout_centerHorizontal="true"
         android:weightSum="1">
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="204dp"
+            android:layout_height="176dp"
             android:id="@+id/listView"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.94"
             android:background="#7b6969" />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.47">
+            android:layout_height="wrap_content">
 
             <Button
                 android:layout_width="match_parent"
@@ -80,6 +80,37 @@
                 android:background="@drawable/main_button"
                 android:layout_marginTop="3dp"
                 android:layout_marginBottom="3dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.67">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:text="BT PWR"
+                android:clickable="true"
+                android:onClick="isOn"
+                android:id="@+id/onOff" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:text="List Devices"
+                android:clickable="true"
+                android:onClick="on"
+                android:id="@+id/listDevs" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="99dp"
+                android:id="@+id/listView2"
+                android:background="#7b6969"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="connecttodevice">Connect to Device</string>
     <string name="title_activity_add_patient">Patient Information</string>
+    <string name="title_activity_bluetooth_control">BluetoothControl</string>
+    <string name="pair">Pair</string>
+    <string name="device_list">Devices</string>
 </resources>
