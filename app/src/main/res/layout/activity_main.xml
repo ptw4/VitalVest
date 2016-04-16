@@ -86,11 +86,12 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.67">
+            android:layout_weight="0.67"
+            android:weightSum="1">
 
             <Button
                 style="?android:attr/buttonStyleSmall"
-                android:layout_width="85dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="BT PWR"
                 android:clickable="true"
@@ -104,13 +105,18 @@
                 android:text="List Devices"
                 android:clickable="true"
                 android:onClick="on"
-                android:id="@+id/listDevs" />
+                android:id="@+id/listDevs"
+                android:layout_weight="0.99" />
 
-            <ListView
+            <Button
+                style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
-                android:layout_height="99dp"
-                android:id="@+id/listView2"
-                android:background="#7b6969"/>
+                android:layout_height="match_parent"
+                android:text="Scan for Devices"
+                android:clickable="true"
+                android:onClick="scan"
+                android:id="@+id/scan" />
+
         </LinearLayout>
     </LinearLayout>
 
