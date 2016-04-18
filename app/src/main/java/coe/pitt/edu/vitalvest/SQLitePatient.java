@@ -97,6 +97,24 @@ public class SQLitePatient extends SQLiteOpenHelper {
 
         return cursor;
     }
+
+    public ArrayList<String> getAllSessions()
+    {
+        ArrayList<String> array_list = new ArrayList<String>();
+
+        //hp = new HashMap();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res =  db.rawQuery( "SELECT * FROM " + RECORDS, null);
+        res.moveToFirst();
+
+        while(res.isAfterLast() == false){
+            array_list.add(res.getString(res.getColumnIndex(SESSION)));
+            res.moveToNext();
+        }
+        return array_list;
+    }
+
+
     //time in this context is the time back from the current time
     //i.e. time = 0 is now, time = 1 is 1 second ago
     public String makePacket( int time ) {
@@ -123,7 +141,7 @@ public class SQLitePatient extends SQLiteOpenHelper {
         cursor = db.rawQuery( getMaxQuery, null );
         //move the pointer to the first record in the result set
         cursor.moveToFirst( );
-        //make sure aresult was returned
+        //make sure a result was returned
         if( cursor.getCount() > 0 ) {
             //get the resulting rowid
             rowid = cursor.getInt( 0 );

@@ -6,4 +6,5 @@
     <string name="title_activity_bluetooth_control">BluetoothControl</string>
     <string name="pair">Pair</string>
     <string name="device_list">Devices</string>
+    <string name="title_activity_patient_history">patientHistory</string>
 </resources>

@@ -30,12 +30,10 @@ public class BluetoothControl extends AppCompatActivity {
         setContentView(R.layout.activity_bluetooth_control);
 
         DL = getIntent().getExtras().getParcelableArrayList("device.list");
-
         lv = (ListView) findViewById(R.id.lv_paired);
-
         DA = new DeviceListAdapter(this);
-
         DA.setData(DL);
+
         DA.setListener(new DeviceListAdapter.OnPairButtonClickListener() {
             @Override
             public void onPairButtonClick(int position) {
@@ -45,7 +43,6 @@ public class BluetoothControl extends AppCompatActivity {
                     unpairDevice(device);
                 } else {
                     showToast("Pairing...");
-
                     pairDevice(device);
                 }
             }
@@ -92,7 +89,7 @@ public class BluetoothControl extends AppCompatActivity {
             String action = intent.getAction();
 
             if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
-                final int state 		= intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, BluetoothDevice.ERROR);
+                final int state = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, BluetoothDevice.ERROR);
                 final int prevState	= intent.getIntExtra(BluetoothDevice.EXTRA_PREVIOUS_BOND_STATE, BluetoothDevice.ERROR);
 
                 if (state == BluetoothDevice.BOND_BONDED && prevState == BluetoothDevice.BOND_BONDING) {

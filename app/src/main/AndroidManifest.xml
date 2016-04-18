@@ -28,7 +28,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="coe.pitt.edu.vitalvest.MainActivity" />
         </activity>
-        <activity android:name=".BluetoothControl"></activity>
+        <activity android:name=".BluetoothControl" />
+        <activity
+            android:name=".PatientHistory"
+            android:label="@string/title_activity_patient_history"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="coe.pitt.edu.vitalvest.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
